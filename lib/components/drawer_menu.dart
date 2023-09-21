@@ -18,7 +18,7 @@ class DrawerMenu extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30,
-                  // backgroundImage: AssetImage("lib/assets/images/eu.jpg"),
+                  backgroundImage: AssetImage("lib/assets/images/eu.jpg"),
                 ),
                 SizedBox(height: 10),
                 Text(

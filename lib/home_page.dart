@@ -114,8 +114,6 @@ class _HomePageState extends State<HomePage> {
     return resultado;
   }
 
-  List<double> numeros = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
