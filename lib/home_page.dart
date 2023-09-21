@@ -27,6 +27,95 @@ class _HomePageState extends State<HomePage> {
 
   double resultado = 0;
 
+  final snackBar = const SnackBar(
+    content: Text("Preencha todos os campos"),
+  );
+
+  bool validaCampos() {
+    if (nota1.text.isEmpty) {
+      return false;
+    }
+    if (nota2.text.isEmpty) {
+      return false;
+    }
+    if (nota3.text.isEmpty) {
+      return false;
+    }
+    if (nota4.text.isEmpty) {
+      return false;
+    }
+    if (nota5.text.isEmpty) {
+      return false;
+    }
+    if (nota6.text.isEmpty) {
+      return false;
+    }
+    if (nota7.text.isEmpty) {
+      return false;
+    }
+    if (nota8.text.isEmpty) {
+      return false;
+    }
+    if (nota8.text.isEmpty) {
+      return false;
+    }
+    if (nota9.text.isEmpty) {
+      return false;
+    }
+    if (nota10.text.isEmpty) {
+      return false;
+    }
+    if (nota11.text.isEmpty) {
+      return false;
+    }
+    if (nota12.text.isEmpty) {
+      return false;
+    }
+    if (nota13.text.isEmpty) {
+      return false;
+    }
+    if (nota14.text.isEmpty) {
+      return false;
+    }
+    return true;
+  }
+
+  double calculaMedia() {
+    double tr1 = double.parse(nota1.text);
+    double tr2 = double.parse(nota2.text);
+    double tr3 = double.parse(nota3.text);
+    double p1 = double.parse(nota4.text);
+    double tr4 = double.parse(nota5.text);
+    double tr5 = double.parse(nota6.text);
+    double p2 = double.parse(nota7.text);
+    double tr6 = double.parse(nota8.text);
+    double tr7 = double.parse(nota9.text);
+    double p3 = double.parse(nota10.text);
+    double p4 = double.parse(nota11.text);
+    double tr8 = double.parse(nota12.text);
+    double tr9 = double.parse(nota13.text);
+    double sub = double.parse(nota14.text);
+
+    resultado = (tr1 +
+            tr2 +
+            tr3 +
+            p1 +
+            tr4 +
+            tr5 +
+            p2 +
+            tr6 +
+            tr7 +
+            p3 +
+            p4 +
+            tr8 +
+            tr9 +
+            sub) /
+        14;
+    return resultado;
+  }
+
+  List<double> numeros = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,6 +157,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota1,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -87,6 +177,7 @@ class _HomePageState extends State<HomePage> {
                           width: 300,
                           child: TextField(
                             controller: nota2,
+                            keyboardType: TextInputType.number,
                             textAlign: TextAlign.end,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
@@ -108,6 +199,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota3,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -128,6 +220,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota4,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -148,6 +241,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota5,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -168,6 +262,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota6,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -188,6 +283,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota7,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -208,6 +304,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota8,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -228,6 +325,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota9,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -247,6 +345,7 @@ class _HomePageState extends State<HomePage> {
                           width: 300,
                           child: TextField(
                             controller: nota10,
+                            keyboardType: TextInputType.number,
                             textAlign: TextAlign.end,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
@@ -268,6 +367,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota11,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -288,6 +388,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota12,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -308,6 +409,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota13,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -328,6 +430,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextField(
                             controller: nota14,
                             textAlign: TextAlign.end,
+                            keyboardType: TextInputType.number,
                             decoration:
                                 const InputDecoration(border: InputBorder.none),
                           ),
@@ -340,7 +443,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Resultado da média: $resultado",
+                          "Resultado da média: ${resultado.toStringAsFixed(1)}",
                           style: const TextStyle(fontSize: 20),
                         )
                       ],
@@ -348,7 +451,13 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(height: 20),
                     TextButton(
                       onPressed: () {
-                        setState(() {});
+                        if (validaCampos()) {
+                          setState(() {
+                            calculaMedia();
+                          });
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        }
                       },
                       style: const ButtonStyle(
                           backgroundColor:
