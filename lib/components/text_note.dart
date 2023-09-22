@@ -8,7 +8,7 @@ class TextNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      text,
+      text.toUpperCase(),
       style: const TextStyle(fontSize: 18, color: Colors.blue),
     );
   }
